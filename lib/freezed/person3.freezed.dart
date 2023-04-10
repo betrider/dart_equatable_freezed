@@ -21,6 +21,7 @@ Person3 _$Person3FromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Person3 {
   int get id => throw _privateConstructorUsedError;
+  @deprecated
   String get name => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
 
@@ -34,7 +35,7 @@ abstract class $Person3CopyWith<$Res> {
   factory $Person3CopyWith(Person3 value, $Res Function(Person3) then) =
       _$Person3CopyWithImpl<$Res, Person3>;
   @useResult
-  $Res call({int id, String name, int age});
+  $Res call({int id, @deprecated String name, int age});
 }
 
 /// @nodoc
@@ -78,7 +79,7 @@ abstract class _$$_Person3CopyWith<$Res> implements $Person3CopyWith<$Res> {
       __$$_Person3CopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name, int age});
+  $Res call({int id, @deprecated String name, int age});
 }
 
 /// @nodoc
@@ -115,7 +116,8 @@ class __$$_Person3CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Person3 implements _Person3 {
-  _$_Person3({required this.id, required this.name, required this.age});
+  _$_Person3({required this.id, @deprecated required this.name, this.age = 89})
+      : assert(id > 0);
 
   factory _$_Person3.fromJson(Map<String, dynamic> json) =>
       _$$_Person3FromJson(json);
@@ -123,8 +125,10 @@ class _$_Person3 implements _Person3 {
   @override
   final int id;
   @override
+  @deprecated
   final String name;
   @override
+  @JsonKey()
   final int age;
 
   @override
@@ -163,14 +167,15 @@ class _$_Person3 implements _Person3 {
 abstract class _Person3 implements Person3 {
   factory _Person3(
       {required final int id,
-      required final String name,
-      required final int age}) = _$_Person3;
+      @deprecated required final String name,
+      final int age}) = _$_Person3;
 
   factory _Person3.fromJson(Map<String, dynamic> json) = _$_Person3.fromJson;
 
   @override
   int get id;
   @override
+  @deprecated
   String get name;
   @override
   int get age;

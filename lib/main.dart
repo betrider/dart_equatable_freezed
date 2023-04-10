@@ -33,8 +33,8 @@ void main(List<String> args) {
 
   // ------------------------
 
-  final person3 = Person3(id: 1, name: 'Code Factory', age: 52);
-  final person33 = Person3(id: 1, name: 'Code Factory', age: 53);
+  final person3 = Person3(id: -1, name: 'Code Factory', age: 52);
+  final person33 = Person3(id: -1, name: 'Code Factory', age: 53);
 
   person3.toJson();
 
